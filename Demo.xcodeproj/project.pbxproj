@@ -102,6 +102,7 @@
 		79F0FE132A653555000FE9BE /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				79F0FE532A658127000FE9BE /* View */,
 				79F0FE3E2A6539EC000FE9BE /* Core */,
 				79F0FE142A653555000FE9BE /* DemoApp.swift */,
 				79F0FE182A653557000FE9BE /* Assets.xcassets */,
@@ -168,6 +169,15 @@
 				79F0FE4B2A653FCD000FE9BE /* Middleware.swift */,
 			);
 			path = Middleware;
+			sourceTree = "<group>";
+		};
+		79F0FE532A658127000FE9BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				79F0FE542A65816E000FE9BE /* HomeView.swift */,
+				79F0FE562A658DEB000FE9BE /* ItemView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,8 +312,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				79F0FE462A653BD9000FE9BE /* Store.swift in Sources */,
+				79F0FE552A65816E000FE9BE /* HomeView.swift in Sources */,
 				79F0FE492A653E88000FE9BE /* Reducer.swift in Sources */,
 				79F0FE152A653555000FE9BE /* DemoApp.swift in Sources */,
+				79F0FE572A658DEB000FE9BE /* ItemView.swift in Sources */,
 				79F0FE4C2A653FCD000FE9BE /* Middleware.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
