@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DetailView: View {
+    let item: Item
     var body: some View {
         VStack(spacing: 20) {
             Spacer()
@@ -16,7 +17,7 @@ struct DetailView: View {
                     .font(.system(size: 12))
                     .foregroundColor(.gray)
 
-                Text("123")
+                Text("\(item.price)")
                     .font(.system(size: 24))
                     .fontWeight(.bold)
             }
@@ -27,18 +28,22 @@ struct DetailView: View {
                     .font(.system(size: 12))
                     .foregroundColor(.gray)
 
-                Text("abc")
-                Text("def")
+                ForEach(item.keywords, id: \.self) { keyword in
+                    Text(keyword)
+                        .font(.body)
+                        .foregroundColor(.black)
+                }
             }
 
             Spacer()
         }
-        .navigationTitle("Detail")
+        .navigationTitle(item.name)
     }
 }
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView()
+        DetailView(item: Item(name: "item1", price: 123, keywords: ["a","b","c"]))
     }
 }
+
