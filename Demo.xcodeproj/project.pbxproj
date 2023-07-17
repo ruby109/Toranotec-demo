@@ -82,7 +82,6 @@
 		79F0FE082A653555000FE9BE = {
 			isa = PBXGroup;
 			children = (
-				79F0FE3E2A6539EC000FE9BE /* Core */,
 				79F0FE132A653555000FE9BE /* Demo */,
 				79F0FE242A653557000FE9BE /* DemoTests */,
 				79F0FE2E2A653557000FE9BE /* DemoUITests */,
@@ -103,6 +102,7 @@
 		79F0FE132A653555000FE9BE /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				79F0FE3E2A6539EC000FE9BE /* Core */,
 				79F0FE142A653555000FE9BE /* DemoApp.swift */,
 				79F0FE162A653555000FE9BE /* ContentView.swift */,
 				79F0FE182A653557000FE9BE /* Assets.xcassets */,
