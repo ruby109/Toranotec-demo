@@ -43,7 +43,10 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(item: Item(name: "item1", price: 123, keywords: ["a","b","c"]))
+        ForEach(["en", "ja"], id: \.self) { id in
+            DetailView(item: Item(name: "item1", price: 123, keywords: ["a","b","c"]))
+                .environment(\.locale, .init(identifier: id))
+        }
     }
 }
 
