@@ -30,7 +30,7 @@ struct DetailView: View {
 
                 ForEach(item.keywords, id: \.self) { keyword in
                     Text(keyword)
-                        .font(.body)
+                        .font(.title2)
                         .foregroundColor(.black)
                 }
             }
