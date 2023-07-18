@@ -26,7 +26,7 @@ class MockHomeAPIRepository: HomeAPIRepositoryProtocol {
         do {
             let data = try Data(contentsOf: URL(fileURLWithPath: path))
             let items = try JSONDecoder().decode(Items.self, from: data)
-            return Just(items.items).eraseToAnyPublisher()
+            return Just(items.items ?? []).eraseToAnyPublisher()
         } catch {
             return Just([]).eraseToAnyPublisher()
         }

@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct Item: Codable, Hashable {
-    let name: String
-    let price: Int
-    let keywords: [String]
+public struct Item: Codable, Hashable {
+    let name: String?
+    let price: Int?
+    let keywords: [String]?
 }
 
 struct Items: Codable {
-    let items: [Item]
+    let items: [Item]?
 }
