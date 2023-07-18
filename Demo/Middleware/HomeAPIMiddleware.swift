@@ -10,7 +10,7 @@ import Combine
 
 private let homeAPIRepository: HomeAPIRepositoryProtocol = MockHomeAPIRepository()
 
-let homeAPIMiddleware: Middleware<HomeState, HomeAction> = { state, action in
+public let homeAPIMiddleware: Middleware<HomeState, HomeAction> = { state, action in
     switch action {
     case .onAppear:
         return homeAPIRepository.getItems()

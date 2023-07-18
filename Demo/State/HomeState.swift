@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct HomeState {
+public struct HomeState: Equatable {
     var items: [Item] = []
     var isLoading = false
 }

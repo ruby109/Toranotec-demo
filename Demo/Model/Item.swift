@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Item: Codable, Hashable {
+public struct Item: Codable, Hashable, Equatable {
     let name: String?
     let price: Int?
     let keywords: [String]?
