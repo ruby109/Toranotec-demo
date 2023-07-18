@@ -15,7 +15,7 @@ struct ItemView: View {
         HStack{
             Text(name)
             Spacer()
-            Text("\(price)")
+            Text("¥\(price)")
         }.padding(.horizontal, 16)
     }
 }

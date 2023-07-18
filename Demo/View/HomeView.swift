@@ -8,6 +8,21 @@
 import SwiftUI
 
 struct HomeView: View {
+    init() {
+        let coloredAppearance = UINavigationBarAppearance()
+        coloredAppearance.configureWithOpaqueBackground()
+        coloredAppearance.backgroundColor = .white
+        let themeColor = UIColor(named: "ThemeColor") ?? UIColor.black
+        coloredAppearance.titleTextAttributes = [.foregroundColor: themeColor]
+        coloredAppearance.largeTitleTextAttributes = [.foregroundColor: themeColor]
+        
+        UINavigationBar.appearance().standardAppearance = coloredAppearance
+        UINavigationBar.appearance().compactAppearance = coloredAppearance
+        UINavigationBar.appearance().scrollEdgeAppearance = coloredAppearance
+
+        UINavigationBar.appearance().tintColor = themeColor
+    }
+
     @EnvironmentObject var store: HomeStore
     var body: some View {
         NavigationStack {
