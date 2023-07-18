@@ -25,20 +25,27 @@ struct HomeView: View {
 
     @EnvironmentObject var store: HomeStore
     var body: some View {
-        NavigationStack {
-            List {
-                ForEach(store.state.items, id: \.name) { item in
-                    NavigationLink(value: item) {
-                        ItemView(name: item.name, price: item.price)
+        ZStack {
+            NavigationStack {
+                List {
+                    ForEach(store.state.items, id: \.name) { item in
+                        NavigationLink(value: item) {
+                            ItemView(name: item.name ?? "", price: item.price ?? 0)
+                        }
                     }
                 }
+                .navigationDestination(for: Item.self, destination: { item in
+                    DetailView(item: item)
+                })
+                .navigationTitle(Text("Demo"))
+                .navigationBarTitleDisplayMode(.inline)
             }
-            .navigationDestination(for: Item.self, destination: { item in
-                DetailView(item: item)
-            })
-            .navigationTitle(Text("Demo"))
-            .navigationBarTitleDisplayMode(.inline)
+
+            if store.state.isLoading {
+                ActivityIndicator()
+            }
         }
+
         .onAppear {
             store.dispatch(.onAppear)
         }

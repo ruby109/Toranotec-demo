@@ -29,6 +29,7 @@
 		79F0FE6C2A65A42C000FE9BE /* items.json in Resources */ = {isa = PBXBuildFile; fileRef = 79F0FE6B2A65A42C000FE9BE /* items.json */; };
 		79F0FE6E2A65B0EF000FE9BE /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F0FE6D2A65B0EF000FE9BE /* DetailView.swift */; };
 		79F0FE722A65DB62000FE9BE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 79F0FE742A65DB62000FE9BE /* Localizable.strings */; };
+		79F0FE7A2A664A84000FE9BE /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F0FE792A664A84000FE9BE /* ActivityIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		79F0FE6D2A65B0EF000FE9BE /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		79F0FE732A65DB62000FE9BE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		79F0FE752A65DB68000FE9BE /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		79F0FE792A664A84000FE9BE /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +217,7 @@
 				79F0FE542A65816E000FE9BE /* HomeView.swift */,
 				79F0FE562A658DEB000FE9BE /* ItemView.swift */,
 				79F0FE6D2A65B0EF000FE9BE /* DetailView.swift */,
+				79F0FE792A664A84000FE9BE /* ActivityIndicator.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79F0FE462A653BD9000FE9BE /* Store.swift in Sources */,
+				79F0FE7A2A664A84000FE9BE /* ActivityIndicator.swift in Sources */,
 				79F0FE552A65816E000FE9BE /* HomeView.swift in Sources */,
 				79F0FE492A653E88000FE9BE /* Reducer.swift in Sources */,
 				79F0FE6E2A65B0EF000FE9BE /* DetailView.swift in Sources */,
