@@ -7,7 +7,7 @@
 
 import Foundation
 
-let homeReducer: Reducer<HomeState, HomeAction> = { state, action in
+public let homeReducer: Reducer<HomeState, HomeAction> = { state, action in
     var mutatingState = state
 
     switch action {

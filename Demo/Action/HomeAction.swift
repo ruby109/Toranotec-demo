@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum HomeAction {
+public enum HomeAction {
     case onAppear
     case homeAPIResponse(items: [Item])
 }

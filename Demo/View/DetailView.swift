@@ -17,7 +17,7 @@ struct DetailView: View {
                     .font(.system(size: 12))
                     .foregroundColor(.gray)
 
-                Text("\(item.price)")
+                Text("\(item.price ?? 0)")
                     .font(.system(size: 24))
                     .fontWeight(.bold)
             }
@@ -28,7 +28,7 @@ struct DetailView: View {
                     .font(.system(size: 12))
                     .foregroundColor(.gray)
 
-                ForEach(item.keywords, id: \.self) { keyword in
+                ForEach(item.keywords ?? [], id: \.self) { keyword in
                     Text(keyword)
                         .font(.title2)
                         .foregroundColor(.black)
@@ -37,7 +37,7 @@ struct DetailView: View {
 
             Spacer()
         }
-        .navigationTitle(item.name)
+        .navigationTitle(item.name ?? "")
     }
 }
 
